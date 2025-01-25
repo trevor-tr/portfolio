@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "PlusJakartaSans";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("./assets/fonts/PlusJakartaSans.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "PlusJakartaSans";
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("./assets/fonts/PlusJakartaSans-Italic.ttf") format("truetype");
+}
+
+html {
+  position: relative;
+  overscroll-behavior: none;
+  @apply bg-zinc-50;
+}
+
+img {
+  -webkit-user-drag: none;
+}
