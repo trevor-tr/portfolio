@@ -3,15 +3,15 @@ import { cn } from "@/lib/utils";
 const Navbar = ({ isHeroInView }: { isHeroInView: boolean }) => {
   return (
     <nav
-      className={cn("fixed transition-all inset-0 h-14 bg-zinc-100 shadow", {
-        "opacity-0 pointer-events-none -top-5": isHeroInView,
-        "opacity-100 pointer-events-auto top-0": !isHeroInView,
+      className={cn("fixed inset-0 h-14 bg-zinc-100 shadow transition-all", {
+        "pointer-events-none -top-5 opacity-0": isHeroInView,
+        "pointer-events-auto top-0 opacity-100": !isHeroInView,
       })}
     >
-      <ul className="flex gap-5 justify-center items-center h-full">
+      <ul className="flex h-full items-center justify-center gap-5">
         <li>
           <a
-            className="px-4 py-2 hover:bg-white rounded-full transition-all"
+            className="rounded-full px-4 py-2 transition-all hover:bg-white"
             href=""
           >
             GitHub
@@ -19,7 +19,7 @@ const Navbar = ({ isHeroInView }: { isHeroInView: boolean }) => {
         </li>
         <li>
           <a
-            className="px-4 py-2 hover:bg-white rounded-full transition-all"
+            className="rounded-full px-4 py-2 transition-all hover:bg-white"
             href=""
           >
             Telegram
@@ -27,7 +27,7 @@ const Navbar = ({ isHeroInView }: { isHeroInView: boolean }) => {
         </li>
         <li>
           <a
-            className="px-4 py-2 hover:bg-white rounded-full transition-all"
+            className="rounded-full px-4 py-2 transition-all hover:bg-white"
             href=""
           >
             Discord

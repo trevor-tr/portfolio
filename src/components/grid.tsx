@@ -1,10 +1,10 @@
 const Grid = () => {
   return (
     <>
-      <div className="absolute md:top-10 top-2 w-full h-[1px] bg-zinc-400" />
-      <div className="absolute md:left-10 left-2 min-h-full h-screen w-[1px] bg-zinc-400" />
-      <div className="absolute md:right-10 right-2 min-h-full h-screen w-[1px] bg-zinc-400" />
-      <div className="absolute md:bottom-10 bottom-2 w-full h-[1px] bg-zinc-400" />
+      <div className="absolute top-2 h-[1px] w-full bg-zinc-400 md:top-10" />
+      <div className="absolute left-2 h-screen min-h-full w-[1px] bg-zinc-400 md:left-10" />
+      <div className="absolute right-2 h-screen min-h-full w-[1px] bg-zinc-400 md:right-10" />
+      <div className="absolute bottom-2 h-[1px] w-full bg-zinc-400 md:bottom-10" />
     </>
   );
 };

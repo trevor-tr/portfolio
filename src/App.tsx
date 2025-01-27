@@ -32,11 +32,11 @@ function App() {
       <button
         onClick={scrollUp}
         className={cn(
-          "fixed bottom-10 hover:scale-110 active:scale-95 shadow-lg md:right-16 right-5 z-50 md:p-2.5 p-3.5 bg-white border border-zinc-200 rounded-full transition-all",
+          "fixed right-5 bottom-10 z-50 cursor-pointer rounded-full border border-zinc-200 bg-white p-3.5 shadow-lg transition-all hover:scale-110 active:scale-95 md:right-16 md:p-2.5",
           {
-            "opacity-100 md:bottom-16 bottom-5 pointer-events-auto": isVisible,
-            "opacity-0 pointer-events-none": !isVisible,
-          }
+            "pointer-events-auto bottom-5 opacity-100 md:bottom-16": isVisible,
+            "pointer-events-none opacity-0": !isVisible,
+          },
         )}
       >
         <ArrowUpIcon className="size-6 text-slate-950" />
