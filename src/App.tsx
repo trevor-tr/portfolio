@@ -4,7 +4,6 @@ import { cn } from "./lib/utils";
 import useScrollUp from "./hooks/useScrollUp";
 import Hero from "@/components/hero";
 import Grid from "@/components/grid";
-import Timeline from "@/components/timeline";
 import Footer from "@/components/footer";
 import { ArrowUpIcon } from "@heroicons/react/24/outline";
 
@@ -26,7 +25,6 @@ function App() {
     <>
       <Grid />
       <Hero />
-      <Timeline />
       <div className="h-screen" />
       <Footer />
       <button
