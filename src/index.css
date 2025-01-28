@@ -20,10 +20,19 @@
   --font-sans: "PlusJakartaSans", "sans-serif";
 }
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 html {
   position: relative;
   overscroll-behavior: none;
-  @apply bg-zinc-50;
+
+  @apply bg-zinc-100;
+  @apply text-gray-900;
+
+  @variant dark {
+    @apply bg-slate-900;
+    @apply text-gray-100;
+  }
 }
 
 img {

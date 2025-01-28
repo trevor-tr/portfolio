@@ -1,24 +1,24 @@
 import { useRef } from "react";
-import { useInView } from "motion/react";
 import { ArrowLongDownIcon } from "@heroicons/react/24/outline";
 import Navbar from "./navbar";
 import GitHub from "./icons/github";
 import Discord from "./icons/discord";
 import Telegram from "./icons/telegram";
+import { GITHUB_LINK, TELEGRAM_LINK } from "@/const";
 
 const Hero = () => {
   const ref = useRef<HTMLDivElement>(null);
-  const isHeroInView = useInView(ref, { margin: "-200px" });
 
   return (
     <div
       ref={ref}
-      className="container mx-auto flex h-screen flex-col items-center justify-center gap-4"
+      className="container mx-auto flex h-screen flex-col items-center justify-center gap-4 pt-14"
     >
       <img
+        fetchPriority="high"
         src="./IMG_0551.jpg"
         alt="Stitch smiling with his teeth showing"
-        className="size-40 rounded-full border-8 border-white shadow-xl lg:size-60"
+        className="size-40 min-h-40 rounded-full border-8 border-white shadow-xl lg:size-60 lg:min-h-60"
       />
       <p className="text-1xl mt-2 text-center md:mt-5 md:text-2xl lg:text-4xl">
         <span className="italic">hello world,</span> i'm trev 👋
@@ -33,12 +33,12 @@ const Hero = () => {
       <div>
         <ul className="mt-5 flex gap-5">
           <li className="rounded-full p-2 transition-all ease-out hover:scale-110 hover:bg-zinc-100 hover:underline">
-            <a href="">
+            <a href={GITHUB_LINK}>
               <GitHub className="size-6" />
             </a>
           </li>
           <li className="rounded-full p-2 transition-all ease-out hover:scale-110 hover:bg-zinc-100 hover:underline">
-            <a href="">
+            <a href={TELEGRAM_LINK}>
               <Telegram className="size-6" />
             </a>
           </li>
@@ -49,7 +49,7 @@ const Hero = () => {
           </li>
         </ul>
       </div>
-      <Navbar isHeroInView={isHeroInView} />
+      <Navbar />
     </div>
   );
 };

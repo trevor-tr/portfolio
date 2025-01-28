@@ -1,12 +1,10 @@
 import { cn } from "@/lib/utils";
+import ThemeSwitcher from "./theme-switcher";
 
-const Navbar = ({ isHeroInView }: { isHeroInView: boolean }) => {
+const Navbar = () => {
   return (
     <nav
-      className={cn("fixed inset-0 h-14 bg-white shadow transition-all", {
-        "pointer-events-none -top-5 opacity-0": isHeroInView,
-        "pointer-events-auto top-0 opacity-100": !isHeroInView,
-      })}
+      className={cn("fixed inset-0 h-14 bg-white shadow transition-all", {})}
     >
       <ul className="flex h-full items-center justify-center gap-5">
         <li>
@@ -33,6 +31,7 @@ const Navbar = ({ isHeroInView }: { isHeroInView: boolean }) => {
             Discord
           </a>
         </li>
+        <ThemeSwitcher />
       </ul>
     </nav>
   );

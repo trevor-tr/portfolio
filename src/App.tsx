@@ -5,6 +5,9 @@ import useScrollUp from "./hooks/useScrollUp";
 import Hero from "@/components/hero";
 import Grid from "@/components/grid";
 import Footer from "@/components/footer";
+import ConList from "@/components/con-list";
+import SocialList from "./components/social-list";
+import { ThemeProvider } from "@/components/providers/theme-provider";
 import { ArrowUpIcon } from "@heroicons/react/24/outline";
 
 function App() {
@@ -22,9 +25,11 @@ function App() {
   }, []);
 
   return (
-    <>
+    <ThemeProvider>
       <Grid />
       <Hero />
+      <ConList />
+      <SocialList />
       <div className="h-screen" />
       <Footer />
       <button
@@ -39,7 +44,7 @@ function App() {
       >
         <ArrowUpIcon className="size-6 text-slate-950" />
       </button>
-    </>
+    </ThemeProvider>
   );
 }
 
