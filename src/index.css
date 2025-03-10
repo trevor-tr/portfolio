@@ -2,7 +2,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "PlusJakartaSans", sans-serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
 }
 #root {
   @apply min-h-screen font-sans;
