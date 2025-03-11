@@ -7,3 +7,7 @@
 #root {
   @apply min-h-screen font-sans;
 }
+
+body {
+  cursor: none;
+}
