@@ -10,6 +10,8 @@ import BlurOutText from "./blur-text";
 import heroPfp from "../assets/images/pfp.jpg";
 import useScrollUp from "../hooks/useScrollUp";
 import { scrollToTop } from "../utils";
+import { useTranslation } from "react-i18next";
+import { useMediaQuery } from "@uidotdev/usehooks";
 
 const buttonVariants = {
   hidden: {
@@ -27,6 +29,8 @@ const buttonVariants = {
 } satisfies Variants;
 
 export default function Hero() {
+  const isSmallDevice = useMediaQuery("only screen and (max-width : 768px)");
+  const { t } = useTranslation();
   const isVisible = useScrollUp(250);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -51,21 +55,18 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.75, delay: 1, ease: [0, 0.55, 0.45, 1] }}
         />
-        <BlurOutText
-          textClassName="text-4xl"
-          text="hello everyone, i'm trev, nice to meet you"
-        />
+        <BlurOutText textClassName="text-4xl" text={t("hero.title")} />
         <motion.p
           className="text-gray-500 text-sm bg-white rounded-full px-4 py-2 shadow-md text-center w-fit"
           initial={{ opacity: 0, y: 50, filter: "blur(10px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           transition={{ duration: 0.75, delay: 3.5, ease: [0, 0.55, 0.45, 1] }}
         >
-          scroll down to know me better uwu
+          {t("hero.subtitle")}
         </motion.p>
       </motion.div>
       <AnimatePresence>
-        {isVisible && (
+        {isVisible && !isSmallDevice && (
           <motion.button
             initial="hidden"
             animate="visible"
@@ -76,7 +77,7 @@ export default function Hero() {
             className="fixed bottom-4 right-4 z-10 bg-white rounded-full px-4 py-2 shadow-md text-center w-fit cursor-none"
             onClick={scrollToTop}
           >
-            scroll up
+            {t("buttons.scrollUp")}
           </motion.button>
         )}
       </AnimatePresence>

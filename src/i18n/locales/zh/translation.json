@@ -1,0 +1,13 @@
+{
+  "hero": {
+    "title": "大家好，我是 trev，很高兴见到你",
+    "subtitle": "向下滚动，更多了解我 uwu"
+  },
+  "jobTitle": "前端开发者",
+  "aboutMe": {
+    "title": "关于我的一些事情"
+  },
+  "buttons": {
+    "scrollUp": "向上滚动"
+  }
+}

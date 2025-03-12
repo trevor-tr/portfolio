@@ -12,7 +12,7 @@ const cursorVariants = {
     scale: 1,
   },
   text: {
-    width: Math.PI,
+    width: 3,
     height: 30,
     scale: 1.75,
   },
@@ -47,8 +47,7 @@ export default function MotionCursor() {
         target instanceof HTMLLIElement ||
         target.closest("p") ||
         target.closest("span") ||
-        target.closest("h1, h2, h3, h4, h5, h6") ||
-        getComputedStyle(target).cursor === "text"
+        target.closest("h1, h2, h3, h4, h5, h6")
       ) {
         setCursorStyle("text");
       } else if (
@@ -65,7 +64,7 @@ export default function MotionCursor() {
       mouse.x.set(clientX - cursorSize / 2);
       mouse.y.set(clientY - cursorSize / 2);
     },
-    [setCursorStyle]
+    [mouse.x, mouse.y]
   );
 
   useEffect(() => {

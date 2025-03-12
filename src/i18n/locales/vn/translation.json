@@ -1,0 +1,13 @@
+{
+  "hero": {
+    "title": "xin chào mọi người, mình là trev, rất vui được gặp",
+    "subtitle": "cuộn xuống để biết mình rõ hơn uwu"
+  },
+  "jobTitle": "lập trình viên front-end",
+  "aboutMe": {
+    "title": "một vài điều về mình"
+  },
+  "buttons": {
+    "scrollUp": "cuộn lên"
+  }
+}

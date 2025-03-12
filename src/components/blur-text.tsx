@@ -1,4 +1,5 @@
 import { motion, type Variants } from "motion/react";
+import { containsChinese } from "../utils";
 
 const parentVariants = {
   hidden: { opacity: 0 },
@@ -30,22 +31,24 @@ export default function BlurOutText({
   textClassName?: string;
   externalVariants?: Variants;
 }) {
-  const words = text.split(" ");
+  const segments = containsChinese(text)
+    ? text.split("").filter((char) => char !== " ")
+    : text.split(" ");
 
   return (
     <motion.p
       initial="hidden"
       animate="visible"
-      className="flex flex-row gap-2 flex-wrap items-baseline justify-center"
+      className="flex flex-row gap-2 flex-wrap items-baseline justify-center px-2 md:px-0"
       variants={externalVariants ?? parentVariants}
     >
-      {words.map((word, index) => (
+      {segments.map((segment, index) => (
         <motion.span
           key={index}
           variants={externalVariants ?? childVariants}
           className={textClassName}
         >
-          {word}
+          {segment}
         </motion.span>
       ))}
     </motion.p>
