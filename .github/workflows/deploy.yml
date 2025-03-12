@@ -20,8 +20,10 @@ jobs:
           node-version: 18
           cache: "pnpm"
 
-      - name: Install pnpm
-        run: npm install -g pnpm
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 10
 
       - name: Install dependencies
         run: pnpm install
@@ -36,5 +38,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: dist # Make sure this matches your Vite build output
+          folder: dist
           target-folder: ${{ github.ref == 'refs/heads/develop' && 'dev' || '.' }}
