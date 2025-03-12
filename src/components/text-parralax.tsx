@@ -1,8 +1,12 @@
 import { useRef } from "react";
-import heroPfp from "../assets/images/pfp.jpg";
+import canyon from "../assets/images/canyon.jpg";
+import city from "../assets/images/city.jpg";
+import dock from "../assets/images/dock.jpg";
 import { motion, MotionValue, useScroll, useTransform } from "motion/react";
+import { useTranslation } from "react-i18next";
 
 export default function TextParralax() {
+  const { t } = useTranslation();
   const container = useRef<HTMLDivElement>(null);
 
   const { scrollYProgress } = useScroll({
@@ -20,38 +24,38 @@ export default function TextParralax() {
         animate={{ transition: { ease: [0.55, 0, 1, 0.45] } }}
       >
         <Slide
-          src={heroPfp}
+          src={canyon}
           left={"-55%"}
           direction="left"
-          phrase="Front End Developer"
+          phrase={t("jobTitle")}
           scrollYProgress={scrollYProgress}
         />
         <Slide
-          src={heroPfp}
+          src={city}
           left={"-25%"}
           direction="right"
           scrollYProgress={scrollYProgress}
-          phrase="Xin chào thế giới"
+          phrase="xin chào thế giới"
         />
         <Slide
-          src={heroPfp}
+          src={dock}
           left={"-40%"}
           direction="left"
           scrollYProgress={scrollYProgress}
           phrase="你好世界"
         />
         <Slide
-          src={heroPfp}
+          src={canyon}
           left={"-25%"}
           direction="right"
           scrollYProgress={scrollYProgress}
-          phrase="Hello world"
+          phrase="hello world"
         />
         <Slide
-          src={heroPfp}
+          src={city}
           left={"-95%"}
           direction="left"
-          phrase="Front End Developer"
+          phrase={t("jobTitle")}
           scrollYProgress={scrollYProgress}
         />
       </motion.div>

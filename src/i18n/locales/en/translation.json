@@ -1,0 +1,13 @@
+{
+  "hero": {
+    "title": "hello everyone, i'm trev, nice to meet you",
+    "subtitle": "scroll down to know me better uwu"
+  },
+  "jobTitle": "front-end developer",
+  "aboutMe": {
+    "title": "something to know about me"
+  },
+  "buttons": {
+    "scrollUp": "scroll up"
+  }
+}
