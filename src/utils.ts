@@ -11,3 +11,7 @@ export function scrollToTop() {
     behavior: "smooth",
   });
 }
+
+export function containsChinese(str: string) {
+  return /[\u4E00-\u9FFF]/.test(str);
+}
