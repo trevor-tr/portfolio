@@ -64,7 +64,7 @@ export default function MotionCursor() {
       mouse.x.set(clientX - cursorSize / 2);
       mouse.y.set(clientY - cursorSize / 2);
     },
-    [mouse.x, mouse.y]
+    [mouse.x, mouse.y],
   );
 
   useEffect(() => {
@@ -82,7 +82,7 @@ export default function MotionCursor() {
           left: smoothMouse.x,
           top: smoothMouse.y,
         }}
-        className="fixed top-50 left-50 size-5 rounded-full bg-black shadow-lg pointer-events-none z-100"
+        className="pointer-events-none fixed top-50 left-50 z-100 size-5 rounded-full bg-black shadow-lg"
         variants={cursorVariants}
         animate={cursorStyle}
       ></motion.div>

@@ -18,7 +18,7 @@ export default function AboutMe() {
   const filter = useTransform(
     scrollYProgress,
     [0.2, 0.24],
-    ["blur(10px)", "blur(0px)"]
+    ["blur(10px)", "blur(0px)"],
   );
 
   return (
@@ -26,13 +26,13 @@ export default function AboutMe() {
       <motion.div
         style={{ opacity, filter, y }}
         transition={{ ease: "easeOut" }}
-        className="sticky top-0 md:p-10 p-4 h-screen max-h-screen flex flex-col"
+        className="sticky top-0 flex h-screen max-h-screen flex-col p-4 md:p-10"
       >
-        <h3 className="md:text-5xl text-3xl font-semibold mb-2 md:mb-6 max-w-fit">
+        <h3 className="mb-2 max-w-fit text-3xl font-semibold md:mb-6 md:text-5xl">
           {t("aboutMe.title")}
         </h3>
-        <div className="flex flex-col flex-1 md:flex-row gap-4 overflow-y-auto">
-          <p className="flex-1 h-min">
+        <div className="flex flex-1 flex-col gap-4 overflow-y-auto md:flex-row">
+          <p className="h-min flex-1">
             born and raised in a coastal city of kiên giang province
           </p>
           <img
