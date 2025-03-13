@@ -5,7 +5,25 @@
   },
   "jobTitle": "front-end developer",
   "aboutMe": {
-    "title": "something to know about me"
+    "title": "something to know about me",
+    "descriptions": [
+      {
+        "title": "born and raised in a coastal city of kiên giang province",
+        "img": "/src/assets/images/dock.jpg"
+      },
+      {
+        "title": "love to play video games, listen to music, watch movies, meet new people, and travel",
+        "img": "/src/assets/images/canyon.jpg"
+      },
+      {
+        "title": "almost thereeeeee, trust me ;)",
+        "img": "/src/assets/images/city.jpg"
+      },
+      {
+        "title": "andddddd done ;)",
+        "img": "/src/assets/images/dock.jpg"
+      }
+    ]
   },
   "buttons": {
     "scrollUp": "scroll up"

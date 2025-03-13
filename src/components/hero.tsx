@@ -7,7 +7,7 @@ import {
   Variants,
 } from "motion/react";
 import BlurOutText from "./blur-text";
-import heroPfp from "../assets/images/pfp.jpg";
+import heroPfp from "../assets/images/dock.jpg";
 import useScrollUp from "../hooks/useScrollUp";
 import { scrollToTop } from "../utils";
 import { useTranslation } from "react-i18next";
