@@ -4,6 +4,7 @@ import Hero from "./components/hero";
 import MotionCursor from "./components/motion-cursor";
 import TextParralax from "./components/text-parralax";
 import Loading from "./components/loading";
+import Footer from "./components/footer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <AboutMe />
         <div className="h-screen" />
         <MotionCursor />
+        <Footer />
       </div>
     </Suspense>
   );
