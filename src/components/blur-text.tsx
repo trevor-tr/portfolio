@@ -39,7 +39,7 @@ export default function BlurOutText({
     <motion.p
       initial="hidden"
       animate="visible"
-      className="flex flex-row gap-2 flex-wrap items-baseline justify-center px-2 md:px-0"
+      className="flex flex-row flex-wrap items-baseline justify-center gap-2 px-2 md:px-0"
       variants={externalVariants ?? parentVariants}
     >
       {segments.map((segment, index) => (

@@ -81,7 +81,7 @@ function Slide({
   const translateX = useTransform(
     scrollYProgress,
     [0, 1],
-    [150 * _direction, -150 * _direction]
+    [150 * _direction, -150 * _direction],
   );
 
   return (
@@ -98,9 +98,9 @@ function Slide({
 
 function Phrase({ src, text }: { src: string; text: string }) {
   return (
-    <div className={"px-5 flex gap-5 items-center"}>
+    <div className={"flex items-center gap-5 px-5"}>
       <p className="text-[10vw]">{text}</p>
-      <span className="relative h-[10vw] aspect-[4/2] rounded-full overflow-hidden">
+      <span className="relative aspect-[4/2] h-[10vw] overflow-hidden rounded-full">
         <img src={src} alt="image" className="object-cover" />
       </span>
     </div>
