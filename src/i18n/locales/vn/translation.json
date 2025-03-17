@@ -1,11 +1,29 @@
 {
   "hero": {
-    "title": "xin chào mọi người, mình là trev, rất vui được gặp",
-    "subtitle": "cuộn xuống để biết mình rõ hơn uwu"
+    "title": "xin chào mọi người, mình là trev, rất vui được gặp bạn",
+    "subtitle": "cuộn xuống để biết thêm về mình uwu"
   },
   "jobTitle": "lập trình viên front-end",
   "aboutMe": {
-    "title": "một vài điều về mình"
+    "title": "một vài điều về mình",
+    "descriptions": [
+      {
+        "title": "sinh ra và lớn lên ở một thành phố ven biển thuộc tỉnh kiên giang",
+        "imgId": "dock"
+      },
+      {
+        "title": "thích chơi game, nghe nhạc, xem phim, gặp gỡ người mới và du lịch",
+        "imgId": "canyon"
+      },
+      {
+        "title": "gần xong rồi, tin mình đi ;)",
+        "imgId": "city"
+      },
+      {
+        "title": "xonggg rồi nè ;)",
+        "imgId": "dock"
+      }
+    ]
   },
   "buttons": {
     "scrollUp": "cuộn lên"

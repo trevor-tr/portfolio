@@ -12,6 +12,7 @@ import useScrollUp from "../hooks/useScrollUp";
 import { scrollToTop } from "../utils";
 import { useTranslation } from "react-i18next";
 import { useMediaQuery } from "@uidotdev/usehooks";
+import LanguageSwitch from "./language-switch";
 
 const buttonVariants = {
   hidden: {
@@ -45,7 +46,7 @@ export default function Hero() {
     <div ref={ref}>
       <motion.div
         style={{ opacity }}
-        className="flex h-screen flex-col items-center justify-center gap-4"
+        className="relative flex h-screen flex-col items-center justify-center gap-4"
       >
         <motion.img
           src={heroPfp}
@@ -81,6 +82,7 @@ export default function Hero() {
           </motion.button>
         )}
       </AnimatePresence>
+      <LanguageSwitch />
     </div>
   );
 }
