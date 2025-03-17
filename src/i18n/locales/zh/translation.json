@@ -5,7 +5,25 @@
   },
   "jobTitle": "前端开发者",
   "aboutMe": {
-    "title": "关于我的一些事情"
+    "title": "关于我的一些事情",
+    "descriptions": [
+      {
+        "title": "在坚江省的一个沿海城市出生和长大",
+        "imgId": "dock"
+      },
+      {
+        "title": "喜欢玩电子游戏、听音乐、看电影、结识新朋友和旅行",
+        "imgId": "canyon"
+      },
+      {
+        "title": "快到了，相信我 ;)",
+        "imgId": "city"
+      },
+      {
+        "title": "完成啦 ;)",
+        "imgId": "dock"
+      }
+    ]
   },
   "buttons": {
     "scrollUp": "向上滚动"

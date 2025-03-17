@@ -9,19 +9,19 @@
     "descriptions": [
       {
         "title": "born and raised in a coastal city of kiên giang province",
-        "img": "/src/assets/images/dock.jpg"
+        "imgId": "dock"
       },
       {
         "title": "love to play video games, listen to music, watch movies, meet new people, and travel",
-        "img": "/src/assets/images/canyon.jpg"
+        "imgId": "canyon"
       },
       {
         "title": "almost thereeeeee, trust me ;)",
-        "img": "/src/assets/images/city.jpg"
+        "imgId": "city"
       },
       {
         "title": "andddddd done ;)",
-        "img": "/src/assets/images/dock.jpg"
+        "imgId": "dock"
       }
     ]
   },
